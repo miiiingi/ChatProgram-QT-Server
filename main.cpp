@@ -53,6 +53,15 @@ public:
         }
         qInfo() << "미디어 팩토리 생성됨.";
         const char *pipeline_desc = "( videotestsrc ! videoconvert ! x264enc ! rtph264pay name=pay0 pt=96 )";
+        // const char *pipeline_desc = "( avfvideosrc ! videoconvert ! videoscale ! videorate ! video/x-raw, width=1280, height=720, framerate=30/1 ! x264enc ! rtph264pay name=pay0 pt=96 )";
+        // const char *pipeline_desc = "( filesrc location=/Users/mingi/study/qt_creator/mediatest/example.mp4 ! qtdemux ! h264parse ! rtph264pay name=pay0 pt=96 )";
+        // const char *pipeline_desc = "( filesrc location=/Users/mingi/study/qt_creator/mediatest/example.mp4 ! matroskademux ! vp8dec ! videoconvert ! x264enc ! rtph264pay name=pay0 pt=96 )";
+        // const char *pipeline_desc = "( filesrc location=/Users/mingi/study/qt_creator/mediatest/example.mp4 ! qtdemux ! h264parse ! rtph264pay name=pay0 pt=96 )";
+        // const char *pipeline_desc = "( avfvideosrc ! videoconvert ! videoscale ! videorate ! video/x-raw, width=1280, height=720, format=RGB, framerate=60/1 ! x264enc tune=zerolatency ! rtph264pay name=pay0 pt=96 )";
+
+
+
+
 
         gst_rtsp_media_factory_set_launch(factory, pipeline_desc);
         gst_rtsp_mount_points_add_factory(mounts, "/test", factory);
