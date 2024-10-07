@@ -52,13 +52,19 @@ public:
             return;
         }
         qInfo() << "미디어 팩토리 생성됨.";
-        const char *pipeline_desc = "( videotestsrc ! videoconvert ! x264enc ! rtph264pay name=pay0 pt=96 )";
+        const char *pipeline_desc = "( pipewiresrc target-object=68 ! video/x-raw,format=NV21,width=1280,height=720,framerate=30/1 ! "
+                            "videoconvert ! x264enc tune=zerolatency ! rtph264pay name=pay0 pt=96 )";
+
+
+
+        // const char *pipeline_desc = "( videotestsrc ! videoconvert ! x264enc ! rtph264pay name=pay0 pt=96 )";
         // const char *pipeline_desc = "( avfvideosrc ! videoconvert ! videoscale ! videorate ! video/x-raw, width=1280, height=720, framerate=30/1 ! x264enc ! rtph264pay name=pay0 pt=96 )";
         // const char *pipeline_desc = "( filesrc location=/Users/mingi/study/qt_creator/mediatest/example.mp4 ! qtdemux ! h264parse ! rtph264pay name=pay0 pt=96 )";
         // const char *pipeline_desc = "( filesrc location=/Users/mingi/study/qt_creator/mediatest/example.mp4 ! matroskademux ! vp8dec ! videoconvert ! x264enc ! rtph264pay name=pay0 pt=96 )";
         // const char *pipeline_desc = "( filesrc location=/Users/mingi/study/qt_creator/mediatest/example.mp4 ! qtdemux ! h264parse ! rtph264pay name=pay0 pt=96 )";
         // const char *pipeline_desc = "( avfvideosrc ! videoconvert ! videoscale ! videorate ! video/x-raw, width=1280, height=720, format=RGB, framerate=60/1 ! x264enc tune=zerolatency ! rtph264pay name=pay0 pt=96 )";
 
+        // 아래의 코드에서 GST-RTSP-SERVER를 이용하여 PICAMERA를 STREAMING하려고하는데, gst-launch-1.0 rtspsrc location=rtsp://127.0.0.1:8554/test ! decodebin ! autovideosink 명령어를 실행하면 아래의 gst error가 발생해 서버 코드를 수정해줘
 
 
 
