@@ -52,7 +52,7 @@ public:
             return;
         }
         qInfo() << "미디어 팩토리 생성됨.";
-        const char *pipeline_desc = "( pipewiresrc target-object=68 ! video/x-raw,format=NV21,width=1280,height=720,framerate=30/1 ! "
+        const char *pipeline_desc = "( pipewiresrc target-object=70 ! video/x-raw,format=NV21,width=640,height=480,framerate=30/1 ! "
                             "videoconvert ! x264enc tune=zerolatency ! rtph264pay name=pay0 pt=96 )";
 
 
