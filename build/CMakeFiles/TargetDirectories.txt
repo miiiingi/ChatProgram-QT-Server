@@ -1,0 +1,7 @@
+/home/mingi/Desktop/workspace/ChatProgram-QT/Server/build/CMakeFiles/install/strip.dir
+/home/mingi/Desktop/workspace/ChatProgram-QT/Server/build/CMakeFiles/edit_cache.dir
+/home/mingi/Desktop/workspace/ChatProgram-QT/Server/build/CMakeFiles/ChatProgramServer.dir
+/home/mingi/Desktop/workspace/ChatProgram-QT/Server/build/CMakeFiles/rebuild_cache.dir
+/home/mingi/Desktop/workspace/ChatProgram-QT/Server/build/CMakeFiles/list_install_components.dir
+/home/mingi/Desktop/workspace/ChatProgram-QT/Server/build/CMakeFiles/install/local.dir
+/home/mingi/Desktop/workspace/ChatProgram-QT/Server/build/CMakeFiles/install.dir
